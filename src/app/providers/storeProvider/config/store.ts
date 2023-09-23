@@ -13,4 +13,4 @@ export function createStore() {
     })
     return store
 }
-export type AppDispatch = ReturnType <typeof createStore>['dispatch']
+export type AppDispatch = ReturnType<typeof createStore>['dispatch']

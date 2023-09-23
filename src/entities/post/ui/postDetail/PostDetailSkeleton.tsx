@@ -41,7 +41,6 @@ export const PostDetailSkeleton = () => {
           </Box>
           <Box>
             <Button>
-          
               <SkeletonText
                 mt="4"
                 noOfLines={4}

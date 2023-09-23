@@ -1,1 +1,1 @@
-export {AppRoutes,getRoutePostDetails,getRouteMain} from './router'
+export { AppRoutes, getRoutePostDetails, getRouteMain } from './router'

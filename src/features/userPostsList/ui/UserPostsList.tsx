@@ -6,26 +6,34 @@ import { Virtuoso } from "react-virtuoso";
 
 export const UserPostsList = () => {
   const [page, setPage] = useState(1);
-  const { data: post ,isLoading,isError} = useGetAllPostsQuery({page:page});
-  const onLoadMorePosts = () =>{
-    if(!isLoading){
-      setPage((prev)=> prev+1)
+  const {
+    data: post,
+    isLoading,
+    isError,
+  } = useGetAllPostsQuery({ page: page });
+  const onLoadMorePosts = () => {
+    if (!isLoading) {
+      setPage((prev) => prev + 1);
     }
-  }
-  if(isError){
-    return <div> error</div>
+  };
+  if (isError) {
+    return <div> error</div>;
   }
   return (
     <Box width={500} height={800}>
-      <Virtuoso 
-        
+      <Virtuoso
         data={post}
         overscan={100}
         endReached={onLoadMorePosts}
-        itemContent={(_,post)=> <PostItem body={post.body} id={post.id} title={post.title} key={post.id}/>}
+        itemContent={(_, post) => (
+          <PostItem
+            body={post.body}
+            id={post.id}
+            title={post.title}
+            key={post.id}
+          />
+        )}
       />
     </Box>
   );
 };
-
-
