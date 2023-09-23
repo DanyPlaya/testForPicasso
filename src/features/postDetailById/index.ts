@@ -1,0 +1,1 @@
+export {PostDetailById} from './ui/PostDetaiById'
