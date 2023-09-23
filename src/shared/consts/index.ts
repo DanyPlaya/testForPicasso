@@ -1,0 +1,1 @@
+export {AppRoutes,getRoutePostDetails,getRouteMain} from './router'
