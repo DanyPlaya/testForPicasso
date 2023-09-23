@@ -14,7 +14,7 @@ export const routeConfig:Record<AppRoutes,RouteProps> ={
         element: <NotFound/>
     },
     postDetail:{
-        path:getRoutePostDetails('/id'),
+        path:getRoutePostDetails(`:id`),
         element: <PostDetails/>
     }
 }
